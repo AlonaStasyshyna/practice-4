@@ -41,7 +41,7 @@ button {
   width: 1200px;
 }
 
-/* Хедер */
+/* ХЕДЕР */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -112,6 +112,7 @@ button {
 }
 
 .contacts-header .link {
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -122,6 +123,24 @@ button {
   letter-spacing: 0.02em;
 }
 
+.contacts-header .link::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link.icon-envelope::before {
+  background-image: url(../images/envelope.svg);
+}
+
+.link.icon-smartphone::before {
+  background-image: url(../images/smartphone.svg);
+}
+
 .contacts-header .link:hover,
 .contacts-header .link:focus {
   color: var(--accent-color);
@@ -130,6 +149,24 @@ button {
 /* CSS страницы Студия */
 /* Герой */
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-color: #c4c4c4;
   text-align: center;
 }
 
@@ -137,7 +174,7 @@ button {
   margin-top: 0;
   margin-bottom: 30px;
 
-  color: var(--title-text-color);
+  color: var(--primary-white-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -201,6 +238,35 @@ button {
   margin-left: 30px;
 }
 
+.quality-list .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+}
+
+.item.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.item.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.item.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.item.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 .quality-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -235,6 +301,13 @@ button {
   display: flex;
 }
 
+.team-list .item {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-list .item + .item {
   margin-left: 30px;
 }
@@ -257,7 +330,7 @@ button {
 
 .team-position {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -311,15 +384,20 @@ button {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
-  border: 1px solid #eeeeee;
-  overflow: hidden;
 
   background-color: var(--primary-white-color);
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects .picture {
   margin-top: 0;
-  margin-bottom: 20px;
+}
+
+.projects-card-name {
+  margin: 20px 24px;
 }
 
 .projects .title {
