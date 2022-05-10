@@ -5,6 +5,7 @@
   --primary-white-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
+  --icons-color: #AFB1B8;
 }
 
 /* Общие */
@@ -123,7 +124,21 @@ button {
   letter-spacing: 0.02em;
 }
 
-.contacts-header .link::before {
+.contacts-header .link:hover,
+.contacts-header .link:focus {
+  color: var(--accent-color);
+}
+
+.contacts-header .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+/* Добавление иконок с помощью псевдоэлементов */
+/* .contacts-header .link::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -139,12 +154,7 @@ button {
 
 .link.icon-smartphone::before {
   background-image: url(../images/smartphone.svg);
-}
-
-.contacts-header .link:hover,
-.contacts-header .link:focus {
-  color: var(--accent-color);
-}
+} */
 
 /* CSS страницы Студия */
 /* Герой */
@@ -238,7 +248,41 @@ button {
   margin-left: 30px;
 }
 
-.quality-list .item::before {
+.quality-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.quality-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.71;
+}
+
+.quality-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items:center;
+
+  background-color: var(--secondary-background-color);
+}
+
+.quality-icon .icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* Добавление иконок с помощью псевдоэлементов */
+/* .quality-list .item::before {
   display: block;
   content: "";
   height: 120px;
@@ -265,23 +309,7 @@ button {
 
 .item.icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
-}
-
-.quality-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.quality-text {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.71;
-}
+} */
 
 /* Чем занимаемся */
 .directions-list {
